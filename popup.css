@@ -2,7 +2,20 @@ body {
     min-width: 400px;
     padding: 0 10px;
     font-family: "Helvetica Neue", sans-serif;
+    background: #fff;
+    color: #333;
 }
+
+@media (prefers-color-scheme: dark) {
+    body { background: #1e1e1e; color: #ddd; }
+    h1 { color: #eee; }
+    #feedback { color: #aaa; }
+    #char_count { color: #888; }
+    #file_label { color: #aaa; }
+    #credit a { color: #666; }
+    #credit a:hover { color: #888; }
+}
+
 h1 {
     font-size: 20px;
     font-weight: bold;
@@ -11,11 +24,52 @@ h1 {
     text-align: center;
     margin: 12px 0;
 }
+
+#editor {
+    height: 350px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#feedback {
+    font-size: 12px;
+    min-height: 18px;
+    margin: 4px 0 2px 0;
+    text-align: center;
+}
+
+#stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+#char_count {
+    font-size: 11px;
+    color: #aaa;
+}
+
+#file_label {
+    font-size: 11px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+#file_label:hover {
+    color: #888;
+}
+
+#file_input {
+    display: none;
+}
+
 .btn-row {
     display: flex;
     gap: 8px;
-    margin-top: 8px;
+    margin-bottom: 6px;
 }
+
 button {
     flex: 1;
     padding: 8px;
@@ -25,27 +79,32 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 }
-button:hover {
-    background-color: #009938;
+
+button:hover { background-color: #009938; }
+button:active { background-color: #007a2c; }
+button:disabled { background-color: #ccc; cursor: default; }
+
+.btn-row.secondary button {
+    background-color: #555;
+    font-size: 12px;
+    padding: 6px;
 }
-button:active {
-    background-color: #007a2c;
-}
-button:disabled {
-    background-color: #ccc;
-}
+
+.btn-row.secondary button:hover { background-color: #444; }
+.btn-row.secondary button:active { background-color: #333; }
+
 #credit {
     text-align: center;
     font-size: 11px;
     color: #aaa;
-    margin: 8px 0 6px 0;
+    margin: 6px 0;
 }
+
 #credit a {
     color: #aaa;
     text-decoration: none;
 }
-#credit a:hover {
-    color: #888;
-}
+
+#credit a:hover { color: #888; }

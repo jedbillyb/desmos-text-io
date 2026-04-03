@@ -4,16 +4,25 @@
 <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-<h1 class="extension-name">Desmos Text Input/Output</h1>
-<div id="editor" style="height: 400px"></div>
-<script src="ace.bundle.js"></script>
-<script src="json.bundle.js"></script>
-<br>
+<h1 class="extension-name">Desmos Text I/O</h1>
+<div id="editor"></div>
+<div id="feedback"></div>
+<div id="stats-row">
+    <span id="char_count">0 chars</span>
+    <label id="file_label">📂 Load file<input type="file" id="file_input" accept=".json"></label>
+</div>
 <div class="btn-row">
-    <button id="btn_import">Import</button>
-    <button id="btn_export">Export</button>
+    <button id="btn_export" title="Ctrl+E">Export</button>
+    <button id="btn_import" title="Ctrl+I">Import</button>
+</div>
+<div class="btn-row secondary">
+    <button id="btn_copy">Copy</button>
+    <button id="btn_download">Download</button>
+    <button id="btn_format">Format</button>
 </div>
 <p id="credit"><a href="https://github.com/jedbillyb" target="_blank">Made with ❤️ by jedbillyb</a></p>
-<script src="popup.bundle.js"></script>
+<script src="ace.bundle.js"></script>
+<script src="json.bundle.js"></script>
+<script src="popup.js"></script>
 </body>
 </html>
