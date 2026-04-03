@@ -6,6 +6,7 @@
       "gecko": {
          "id": "{2904c92e-079c-424b-bcd4-e1d4ae624249}",
          "data_collection_permissions": {
+            "required": [],
             "optional": []
          }
       }
